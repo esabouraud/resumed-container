@@ -1,0 +1,7 @@
+FROM localhost/resumed:latest
+
+RUN npm install -g pnpm && \
+    npm install esabouraud/jsonresume-theme-lucide#i18n && \
+    cd /resumed/node_modules/jsonresume-theme-lucide && \
+    pnpm install && \
+    pnpm run build-css
